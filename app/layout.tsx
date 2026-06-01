@@ -1,6 +1,10 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import "./index.css"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +26,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <div className="">
+      <nav className="sticky">
+        <div className="bg-black text-white p-1">
+          <p className="text-center pt-1">Get access lauches and oMera. <Link className="underline" href="#">Sign in for trota</Link>➡️</p>
+          <p className="text-end pr-1 -mt-5 hidden md:block">NIG</p>
+        </div>
+        <div id="navs" className="flex justify-around pt-2">
+           <div className="text-black pr-3 hidden md:block">
+            <button  className="mr-10">Women</button>
+            <button  className="mr-10">Man</button>
+            <button  className="mr-10">About</button>
+            <button  className="mr-10">Evergreen shorts</button>
+           </div>
+           <div className="text-black text-center text-3xl -ml-64">
+            <span className="font-semibold">EVERLANE</span>
+           </div>
+           <div className="mr-1">
+            <span className="mr-5">🔍</span>
+            <span className="mr-5">👤</span>
+            <span className="mr-5">🛒</span>
+           </div>
+           
+        </div>
+        <hr className="" />
+      </nav>
+      </div>
+      <body className="min-h-full flex flex-col bg-white">{children}</body>
     </html>
   );
 }
