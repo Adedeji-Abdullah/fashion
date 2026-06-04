@@ -23,7 +23,7 @@ const Everlane = () => {
           <div id="evalaneBG1" className="bg-cover mx-auto w-full max-w-[300px] h-[300px] relative">
             <span className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full">🛒</span>
           </div>
-          <div id="evalaneBG2" className="bg-cover mx-auto w-full max-w-[300px] h-[300px] relative">
+          <div id="evalaneBG2" className="bg-cover mx-auto hidden md:block w-full max-w-[300px] h-[300px] relative">
             <span className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full">🛒</span>
           </div>
           <div id="evalaneBG3" className="bg-cover mx-auto w-full max-w-[300px] h-[300px] relative">

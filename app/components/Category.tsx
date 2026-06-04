@@ -9,13 +9,13 @@ const Category = () => {
           <p className='py-20 text-center text-2xl font-semibold'>Shop by Category</p>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 pb-10 justify-items-center'>
-          <img src='/person1.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
-          <img src='/person2.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
-          <img src='/person3.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
-          <img src='/person4.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
-          <img src='/person5.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
-          <img src='/person7.jpg' className='w-full h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+        <div id='categoryIMG' className='grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 pb-10 justify-items-center'>
+          <img src='/person1.jpg' className='w-full  h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+          <img src='/person2.jpg' className='w-full  h-auto object-cover hidden md:block' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+          <img src='/person3.jpg' className='w-full  h-auto object-cover hidden md:block' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+          <img src='/person4.jpg' className='w-full  h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+          <img src='/person5.jpg' className='w-full  h-auto object-cover hidden md:block' style={{ maxWidth: '270px', height: '350px' }} alt='' />
+          <img src='/person7.jpg' className='w-full  h-auto object-cover' style={{ maxWidth: '270px', height: '350px' }} alt='' />
         </div>
 
         <div className='mt-32 mb-20 grid grid-cols-1 md:grid-cols-3 gap-4'>

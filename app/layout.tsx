@@ -65,18 +65,18 @@ export default function RootLayout({
             <p className="text-end pr-1 -mt-5 hidden md:block">NIG</p>
           </div>
           <div id="navs" className="flex justify-around items-center pt-2 pb-2 relative">
-            <div className="text-black pr-3 hidden md:flex">
-              <button className="mr-10" onClick={() => setActiveMenu(activeMenu === 'Women' ? null : 'Women')}>Women</button>
-              <button className="mr-10" onClick={() => setActiveMenu(activeMenu === 'Man' ? null : 'Man')}>Man</button>
-              <Link href="/about" className="mr-10" onClick={() => setActiveMenu(null)}>
+            <div className="text-black pr-3 flex">
+              <button className="mr-2 text-xs md:text-sm lg:text-sm md:mr-5 lg:mr-10" onClick={() => setActiveMenu(activeMenu === 'Women' ? null : 'Women')}>Women</button>
+              <button className="mr-2 text-xs md:text-sm lg:text-sm md:mr-5 lg:mr-10" onClick={() => setActiveMenu(activeMenu === 'Man' ? null : 'Man')}>Man</button>
+              <Link href="/about" className="mr-2 text-xs md:text-sm lg:text-sm md:mr-5 lg:mr-10" onClick={() => setActiveMenu(null)}>
                 About
               </Link>
-              <button className="mr-10" onClick={() => setActiveMenu(activeMenu === 'Evergreen shorts' ? null : 'Evergreen shorts')}>Evergreen shorts</button>
+              <button className="mr-2 text-xs md:text-sm lg:text-sm md:mr-5 lg:mr-10" onClick={() => setActiveMenu(activeMenu === 'Evergreen shorts' ? null : 'Evergreen shorts')}>Evergreen shorts</button>
             </div>
-            <div className="text-black text-center text-3xl -ml-64">
-              <span className="font-semibold">EVERLANE</span>
+            <div className="text-black text-center text-3xl mr-8 md:-ml-32 lg:-ml-64">
+              <span className="font-semibold text-xs md:text-sm lg:text-3xl">EVERLANE</span>
             </div>
-            <div className="mr-1">
+            <div className="text-xs md:text-sm lg:text-xl">
               <span className="mr-5">🔍</span>
               <span className="mr-5">👤</span>
               <span className="mr-5">🛒</span>

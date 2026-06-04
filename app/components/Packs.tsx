@@ -9,7 +9,7 @@ const Packs = () => {
           <img src='/coat1.jpg' className='w-full h-auto' alt='' />
           <p className='text-center mt-3'>The best presents for everyone on your list.</p>
         </div>
-        <div className='w-full lg:-ml-96' style={{ maxWidth: 450 }}>
+        <div className='w-full xl:-ml-[220px]' style={{ maxWidth: 450 }}>
           <p className='text-center mb-3 font-semibold'>Cleaner Fashion</p>
           <img src='/tree2.jpg' className='w-full h-auto' alt='' />
           <p className='text-center mt-3'>See the sustainability efforts behind each of our products.</p>
