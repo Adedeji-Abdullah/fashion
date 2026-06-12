@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const hero = () => {
   return (
@@ -22,6 +23,7 @@ const hero = () => {
                 <p className='text-base sm:text-lg mb-6'>with new winter essentials.</p>
                 <button className='inline-block rounded-none bg-white py-2 px-8 text-black'>SHOP NOW</button>
             </div>
+            
         </div>
     </div>
   )

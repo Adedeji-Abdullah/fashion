@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Favorites2 = () => {
   return (
@@ -36,6 +37,7 @@ const Favorites2 = () => {
         <button className="w-2 h-2 rounded-full mx-1 text-black bg-black"></button>
         <button className="w-2 h-2 rounded-full mx-1 text-black bg-black"></button>
       </div>
+      
 
       <hr className="border-t border-gray-300 mt-16" />
     </section>

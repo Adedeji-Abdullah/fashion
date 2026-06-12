@@ -1,5 +1,6 @@
 import React from "react";
 import Favorites2 from "./Sub/Favorites2";
+import Link from "next/link";
 
 const Favorites = () => {
   return (
@@ -29,8 +30,10 @@ const Favorites = () => {
         
       </div>
       
-      <Favorites2 />
       
+      <Favorites2 />
+      <p className="text-2xl font-semibold mb-5 text-center">Visit our Store</p>
+      <Link href="/Stores" className='bg-gray-400 mb-14 py-4 px-14 rounded-3xl items-center flex justify-center text-white'>Store</Link>
       
     </>
   );

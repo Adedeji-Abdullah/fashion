@@ -140,6 +140,13 @@
   overflow-x: auto;
 }
 
+#storeBG{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+  padding-left: 28px;
+}
+
 @keyframes spin {
   from {translate: 0;}
   to {translate: -100%;}
