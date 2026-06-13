@@ -147,6 +147,13 @@
   padding-left: 28px;
 }
 
+/* #cart{
+  float: right;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+} */
+
 @keyframes spin {
   from {translate: 0;}
   to {translate: -100%;}

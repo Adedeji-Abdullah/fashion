@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Category = () => {
@@ -7,6 +8,7 @@ const Category = () => {
         <div className='mb-8'>
           <p className='text-white'>Hi</p>
           <p className='py-20 text-center text-2xl font-semibold'>Shop by Category</p>
+          <Link href='/cart' className='text-3xl py-1 px-2 border rounded-2xl text-center font-bold hover:font-semibold'>SHOP</Link>
         </div>
 
         <div id='categoryIMG' className='grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 pb-10 justify-items-center'>
