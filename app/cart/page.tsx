@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { blob } from "stream/consumers";
+import { useCartStore } from "../cartStore";
 
 const page = () => {
   const [everyone, setEveryone] = useState(false);
@@ -15,6 +16,8 @@ const page = () => {
 
   console.log(`${img1}`)
 
+  const cartStore = useCartStore((state: { cart: string[] }) => state.cart);
+  const addToCart = useCartStore((state: { addToCart: (item: string) => void }) => state.addToCart);
   return (
     <>
       <div className="mb-20 relative overflow-auto">
@@ -85,7 +88,7 @@ const page = () => {
                   src="everyone1.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg1(1), setImgcart(prev => [...prev,"everyone1.jpg"]))}
+                  onClick={() => (addToCart("everyone1.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -100,7 +103,7 @@ const page = () => {
                   src="everyone2.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg1(2), setImgcart(prev => [...prev,"everyone2.jpg"]))}
+                  onClick={() => (addToCart("everyone2.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -115,7 +118,7 @@ const page = () => {
                   src="everyone3.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg1(3), setImgcart(prev => [...prev,"everyone3.jpg"]))}
+                  onClick={() => (addToCart("everyone3.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -134,7 +137,7 @@ const page = () => {
                   src="man1.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg2(1), setImgcart(prev => [...prev,"man1.jpg"]))}
+                  onClick={() => (addToCart("man1.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -150,7 +153,7 @@ const page = () => {
                   src="man2.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg2(2), setImgcart(prev => [...prev,"man2.jpg"]))}
+                  onClick={() => (addToCart("man2.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -166,7 +169,7 @@ const page = () => {
                   src="man3.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg2(3), setImgcart(prev => [...prev,"man3.jpg"]))}
+                  onClick={() => (addToCart("man3.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -185,7 +188,7 @@ const page = () => {
                   src="woman1.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg3(1), setImgcart(prev => [...prev,"woman1.jpg"]))}
+                  onClick={() => (addToCart("woman1.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -201,7 +204,7 @@ const page = () => {
                   src="woman2.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg3(2), setImgcart(prev => [...prev,"woman2.jpg"]))}
+                  onClick={() => (addToCart("woman2.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -217,8 +220,7 @@ const page = () => {
                   src="woman4.jpg"
                   className="md:w-120 w-70 md:h-110 h-60"
                   alt=""
-                  onClick={() => (setImg3(4), setImgcart(prev => [...prev,"woman4.jpg"]))}
-                  
+                  onClick={() => (addToCart("woman4.jpg"))}
                 />
                 <button onClick={() => setCart(true)} className="text-red-500 border my-3">30% off</button>
                 <div className="block">
@@ -241,7 +243,7 @@ const page = () => {
           <img className="w-20 absolute" src={`man${img2}.jpg`} alt="" />
           <img className="w-20 absolute" src={`woman${img3}.jpg`} alt="" /> */}
 
-          {imgcart.map((image, index) => (
+          {cartStore.map((image: string, index: number) => (
             <div className="pl-5 py-5" key={index}>
               <img src={image} className="md:w-40 w-20" alt="" /><span className="text-gray-600">$150</span>
             </div>
